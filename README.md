@@ -18,7 +18,11 @@
 2. 2021년 2월 5일 : 
     - 주식 종목 가지고 오기. 
     - 1.1.1 종목가지고온다. 수집 후 ./stock_list 에 저장
+3. 2020년 2월 9일 : 
+    - pykrx package 으로 가지고 옴 : https://github.com/sharebook-kr/pykrx
+    - 요청하는 방법 정리해서 다시 만들기. 
 
 
 ## 참고자료 
 1. 종목 코드 자료 가직 오기 : https://wendys.tistory.com/173
+2. pykrx package : https://github.com/sharebook-kr/pykrx 
