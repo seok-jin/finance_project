@@ -8,22 +8,22 @@ class Get_stock_ticker():
         self.logging = Logging()
         
         #날짜 포맷 YYYYMMDD
-        to_day = date.today().isoformat().replace('-','')
+        to_day = date.today().isoformat().replace('-', '')
         self.logging.logger.debug("수행시간 : "+ to_day)
         # 1. 수집
         # 1.1 주식 종목을 가지고 온다.
         # 1.1.1 신규 종목 가지고 오기. - ETF,KOSPI,KOSDAQ
 
         tickers = pd.DataFrame(stock.get_etf_ticker_list(to_day))
-        tickers.to_csv('./stock_list/ETF_ticker_list_'+date.today().isoformat()+'.scv')
+        tickers.to_csv('./stock_data_ticker/ETF/ETF_ticker_list_'+date.today().isoformat()+'.scv')
         self.logging.logger.debug("Get ETF_ticker")
 
         tickers = pd.DataFrame(stock.get_market_ticker_list(to_day, market='KOSPI'))
-        tickers.to_csv('./stock_list/KOSPI_ticker_list_'+date.today().isoformat()+'.scv')
+        tickers.to_csv('./stock_data_ticker/KOSPI/KOSPI_ticker_list_'+date.today().isoformat()+'.scv')
         self.logging.logger.debug("Get KOSPI ")
 
         tickers = pd.DataFrame(stock.get_market_ticker_list(to_day, market='KOSDAQ'))
-        tickers.to_csv('./stock_list/KOSDAQ_ticker_list_'+date.today().isoformat()+'.scv')
+        tickers.to_csv('./stock_data_ticker/KOSDAQ/KOSDAQ_ticker_list_'+date.today().isoformat()+'.scv')
         self.logging.logger.debug("Get KOSDAQ ")
 
 
