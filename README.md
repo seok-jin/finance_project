@@ -22,7 +22,9 @@
     - pykrx package 으로 가지고 옴 : https://github.com/sharebook-kr/pykrx
     - 요청하는 방법 정리해서 다시 만들기. 
 4. 2020년 2월 10일 :
-    - pykrx 를 통해 kospi,kosdaq, ETF list 가지고옴 
+    - pykrx 를 통해 kospi,kosdaq, ETF list 가지고옴
+5. 2020년 2월 21일 : 
+    - 프로젝트의 클래스화 및 저장 티커 데이터 종목별 디렉터리 구분 및 저장
 
 ## 참고자료 
 1. 종목 코드 자료 가직 오기 : https://wendys.tistory.com/173
