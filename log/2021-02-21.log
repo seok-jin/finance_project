@@ -1,0 +1,29 @@
+2021-02-21 22:05:19,272 | __init__.py | 7 | DEBUG -> main class init
+2021-02-21 22:06:44,724 | __init__.py | 7 | DEBUG -> main class init
+2021-02-21 22:09:47,180 | __init__.py | 7 | DEBUG -> main class init
+2021-02-21 22:09:47,180 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:09:47,180 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:09:48,349 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:09:48,349 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:09:48,569 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:09:48,569 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:09:48,865 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:09:48,865 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:11:51,876 | __init__.py | 7 | DEBUG -> main class init
+2021-02-21 22:11:51,877 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:11:51,877 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:11:53,319 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:11:53,319 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:11:53,512 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:11:53,512 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:11:53,815 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:11:53,815 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:12:39,406 | __init__.py | 7 | DEBUG -> main class init
+2021-02-21 22:12:39,407 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:12:39,407 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:12:40,953 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:12:40,953 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:12:41,187 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:12:41,187 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:12:41,545 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:12:41,545 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
