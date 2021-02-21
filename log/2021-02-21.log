@@ -45,3 +45,21 @@
 2021-02-21 22:28:17,379 | stock_base.py | 23 | DEBUG -> Get KOSPI 
 2021-02-21 22:28:17,659 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
 2021-02-21 22:28:17,659 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:31:23,339 | __init__.py | 6 | DEBUG -> main class init
+2021-02-21 22:31:23,339 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:31:23,339 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:31:25,472 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:31:25,472 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:31:25,662 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:31:25,662 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:31:26,081 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:31:26,081 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:31:42,621 | stock_base.py | 12 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:31:44,079 | stock_base.py | 19 | DEBUG -> Get ETF_ticker
+2021-02-21 22:31:44,292 | stock_base.py | 23 | DEBUG -> Get KOSPI 
+2021-02-21 22:31:44,688 | stock_base.py | 27 | DEBUG -> Get KOSDAQ 
+2021-02-21 22:33:41,741 | stock_base.py | 9 | DEBUG -> main class init
+2021-02-21 22:33:41,742 | stock_base.py | 13 | DEBUG -> 수행시간 : 20210221
+2021-02-21 22:33:43,314 | stock_base.py | 20 | DEBUG -> Get ETF_ticker
+2021-02-21 22:33:43,551 | stock_base.py | 24 | DEBUG -> Get KOSPI 
+2021-02-21 22:33:43,859 | stock_base.py | 28 | DEBUG -> Get KOSDAQ 
