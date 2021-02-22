@@ -79,12 +79,14 @@ class Get_stock_ticker:
                 # TODO : 2021-02-23 기존에 정보가 있을때 append 하는 처리 만들기.
                 if os.path.isfile('./stock_data_ticker/ETF/ETF_ticker_list_' + i + '.scv'):
                     csv_data = pd.read_csv('./stock_data_ticker/ETF/ETF_ticker_list_' + i + '.scv')
-                    if datetime.strptime(csv_data.iloc[-1]['날짜'], "%Y-%m-%d") < datetime.strptime(str(self.to_day),
-                                                                                                  "%Y-%m-%d"):
-                        df = stock.get_market_ohlcv_by_date((csv_data.iloc[-1]['날짜']).split('-'), str(self.to_day), i)
+                    # if datetime.strptime(csv_data.iloc[-1]['날짜'], "%Y-%m-%d") < datetime.strptime(str(self.to_day),
+                    #                                                                               "%Y-%m-%d"):
+                    #     df = stock.get_market_ohlcv_by_date((csv_data.iloc[-1]['날짜']).split('-'), str(self.to_day), i)
                 else:
                     df = stock.get_market_ohlcv_by_date("20100101", str(self.to_day), i)
                     df.to_csv('./stock_data_ticker/ETF/ETF_ticker_list_' + i + '.scv')
                     # self.logging.logger.debug("Get ETF_" + i + "_ticker")
                     time.sleep(1)
         self.logging.logger.debug("ETF 종목별 히스토리 수집 종료")
+
+        self.logging.logger.debug("종목별 수신정보 동기화 완료")
