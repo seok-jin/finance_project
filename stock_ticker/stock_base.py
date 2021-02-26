@@ -92,7 +92,7 @@ class Get_stock_ticker:
                     # self.logging.logger.debug(date_ +'::::'+str(self.to_day))
                     df_KOSPI['티커'] = df_KOSPI.index
                     insert_df = df_KOSPI[df_KOSPI['티커'] == i]
-                    if insert_df['종가'] != 0 and insert_df['거래량'] != 0:
+                    if insert_df['종가'].any() != 0:
                         insert_df = insert_df.drop(['티커'], axis=1)
                         insert_df['날짜'] = date_
                         insert_df = insert_df[['날짜', '시가', '고가', '저가', '종가', '거래량']]
@@ -128,7 +128,7 @@ class Get_stock_ticker:
                     # self.logging.logger.debug(date_ +'::::'+str(self.to_day))
                     df_KOSDAQ['티커'] = df_KOSDAQ.index
                     insert_df = df_KOSDAQ[df_KOSDAQ['티커'] == i]
-                    if insert_df['종가'] != 0 and insert_df['거래량'] != 0:
+                    if insert_df['종가'].any() != 0:
                         insert_df = insert_df.drop(['티커'], axis=1)
                         insert_df['날짜'] = date_
                         insert_df = insert_df[['날짜', '시가', '고가', '저가', '종가', '거래량']]
