@@ -37,16 +37,17 @@
 7. 2021년 2월 26일 : 
     - kospi kosdaq 수집 및 기간별 업데이트 로직 구현완료 -> 테스트 중
 8. 2021년 2월 28일 :
-    - 보조지표 넣기
+    - 보조지표 넣기 -> 완료 및 수행 처리 이상 없음 
     - 기본소스
-```python
-df = stock.get_market_ohlcv_by_date("20100101", '20210225', '000075')
-ls = [5,10,20,60,120]
-for i in ls:
-    df['SMA'+str(i)] = ta.EMA(df, timeperiod=i, price='종가' )
-    df['VMA'+str(i)] = ta.EMA(df, timeperiod=i, price='거래량' )
-df.to_csv('./KOSPI_ticker_list_000075.scv')   
-```      
+        ```python
+        df = stock.get_market_ohlcv_by_date("20100101", '20210225', '000075')
+        ls = [5,10,20,60,120]
+        for i in ls:
+            df['SMA'+str(i)] = ta.EMA(df, timeperiod=i, price='종가' )
+            df['VMA'+str(i)] = ta.EMA(df, timeperiod=i, price='거래량' )
+        df.to_csv('./KOSPI_ticker_list_000075.scv')   
+        ```      
+    - 다음날 지표 추가 및 보조지표 추가 확인 테스트 필요 
 
 ## 참고자료 
 1. 종목 코드 자료 가직 오기 : https://wendys.tistory.com/173

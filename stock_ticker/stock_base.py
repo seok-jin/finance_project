@@ -26,8 +26,6 @@ class Get_stock_ticker:
         self.get_all_ticker_list()
         # 1.2 개별 종목별 주식 히스토리 불러오기
         self.get_stock_date()
-        # 1.3 보조지표 추가하기
-        self.add_stock_indicator()
 
     def get_all_ticker_list(self):
         tickers = pd.DataFrame(stock.get_etf_ticker_list(self.to_day))
@@ -108,6 +106,10 @@ class Get_stock_ticker:
                     time.sleep(1)
                     insert_count += 1
 
+                if os.path.isfile('./stock_data_ticker/KOSPI/KOSPI_ticker_list_' + i + '.scv'):
+                    # 보조조지표 업데이트 로직 수행 종목코드 파라미터로 던지기
+                    self.add_stock_indicator(i, 'KOSPI')
+
         self.logging.logger.debug(
             "KOSPI 종목별 히스토리 수집 종료 신규 : " + str(insert_count) + ", 업데이트 : " + str(update_count) + ", 변경없음 : " + str(
                 no_count))
@@ -143,6 +145,8 @@ class Get_stock_ticker:
                     # self.logging.logger.debug("Get KOSDAQ_" + str(i) + "_ticker")
                     time.sleep(1)
                     insert_count += 1
+
+                self.add_stock_indicator(i, 'KOSDAQ')
         self.logging.logger.debug(
             "KOSDAQ 종목별 히스토리 수집 종료 신규 : " + str(insert_count) + ", 업데이트 : " + str(update_count) + ", 변경없음 : " + str(
                 no_count))
@@ -168,10 +172,11 @@ class Get_stock_ticker:
         #
         # self.logging.logger.debug("종목별 수신정보 동기화 완료")
 
-    def add_stock_indicator(self):
-        self.logging.logger.debug("add_stock_indicator 시작")
+    def add_stock_indicator(self, ticker_code, market_gbn):
+        df = pd.read_csv('./stock_data_ticker/'+market_gbn+'/'+market_gbn+'_ticker_list_' + ticker_code + '.scv')
+        # 추가할 보조지표
+        for i in [5, 10, 20, 60, 120]:
+            df['SMA' + str(i)] = ta.EMA(df, timeperiod=i, price='종가')
+            df['VMA' + str(i)] = ta.EMA(df, timeperiod=i, price='거래량')
+        df.to_csv('./stock_data_ticker/'+market_gbn+'/'+market_gbn+'_ticker_list_' + ticker_code + '.scv')
 
-
-
-
-        self.logging.logger.debug("add_stock_indicator 종료")
