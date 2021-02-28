@@ -36,7 +36,17 @@
     - header 변경 필요 np.array(['date', 'open', 'high', 'Low', 'close', 'volume'])
 7. 2021년 2월 26일 : 
     - kospi kosdaq 수집 및 기간별 업데이트 로직 구현완료 -> 테스트 중
-
+8. 2021년 2월 28일 :
+    - 보조지표 넣기
+    - 기본소스
+```python
+df = stock.get_market_ohlcv_by_date("20100101", '20210225', '000075')
+ls = [5,10,20,60,120]
+for i in ls:
+    df['SMA'+str(i)] = ta.EMA(df, timeperiod=i, price='종가' )
+    df['VMA'+str(i)] = ta.EMA(df, timeperiod=i, price='거래량' )
+df.to_csv('./KOSPI_ticker_list_000075.scv')   
+```      
 
 ## 참고자료 
 1. 종목 코드 자료 가직 오기 : https://wendys.tistory.com/173

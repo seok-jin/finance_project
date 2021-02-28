@@ -171,4 +171,7 @@ class Get_stock_ticker:
     def add_stock_indicator(self):
         self.logging.logger.debug("add_stock_indicator 시작")
 
+
+
+
         self.logging.logger.debug("add_stock_indicator 종료")
